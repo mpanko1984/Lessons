@@ -13,5 +13,9 @@ public class FixedSalaryEmployee extends Employee {
         double fixedRate = salary;
         return fixedRate;
     }
+    @Override
+    public String toString() {
+        return this.getName()+" "+this.getSurname()+" "+this.doSalaryCalculation();
+    }
 }
 

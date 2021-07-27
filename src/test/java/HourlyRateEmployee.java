@@ -16,4 +16,8 @@ public class HourlyRateEmployee extends Employee {
     public double doSalaryCalculation() {
         return hours * 20.8 * hoursRate;
     }
+    @Override
+    public String toString() {
+        return this.getName()+" "+this.getSurname()+" "+this.doSalaryCalculation();
+    }
 }
