@@ -30,5 +30,5 @@ public abstract class Employee {
         this.id = id;
     }
 
-    public abstract double salaryCalculation();
+    public abstract double doSalaryCalculation();
 }
