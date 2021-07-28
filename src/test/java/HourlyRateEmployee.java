@@ -15,6 +15,7 @@ public class HourlyRateEmployee extends Employee {
 
     @Override
     public String toString() {
+        super.toString();
         return this.getName() + " " + this.getSurname() + " " + this.doSalaryCalculation();
     }
 }
