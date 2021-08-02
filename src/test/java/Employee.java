@@ -6,6 +6,10 @@ public abstract class Employee {
     private int id;
 
     public Employee() {
+    }
+
+
+    /*    public Employee() {
         Scanner scan = new Scanner(System.in);
         System.out.println("input name - ");
         String name = scan.nextLine();
@@ -15,6 +19,12 @@ public abstract class Employee {
         System.out.println("input id - ");
         scan = new Scanner(System.in);
         int id = scan.nextInt();
+        this.setName(name);
+        this.setSurname(surname);
+        this.setId(id);
+    }*/
+
+    public Employee (String name, String surname, int id) {
         this.setName(name);
         this.setSurname(surname);
         this.setId(id);
@@ -44,6 +54,12 @@ public abstract class Employee {
         this.id = id;
     }
 
-    public abstract double doSalaryCalculation();
+    @Override
+    public String toString() {
+        return  name +" "+ surname +" "+
+                ", id=" + id + " ";
+    }
+
+    protected abstract double doSalaryCalculation();
 }
 
