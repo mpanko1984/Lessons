@@ -1,5 +1,5 @@
 public class Program1 extends Hometask {
-    public static void main(String[] args) {
+/*    public static void main(String[] args) {
         setA(true);
         setB(false);
         setI(2);
@@ -12,10 +12,10 @@ public class Program1 extends Hometask {
         doBooleanList();
         doStringList();
         doIntegerList();
-        findMax(4, 5);
+        findMax(4, 4);
         findNeedElement();
         findMin();
-    }
+    }*/
 }
 
 

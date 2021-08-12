@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class Hometask {
     private static boolean a;
@@ -10,48 +12,53 @@ public class Hometask {
     private static String string5;
     private static int i;
     private static int y;
+    private ArrayList<Object> list;
 
-    public static void setA(boolean a) {
+    public void setA(boolean a) {
         Hometask.a = a;
     }
 
-    public static void setB(boolean b) {
+    public void setB(boolean b) {
         Hometask.b = b;
     }
 
-    public static void setString1(String string1) {
+    public String setString1(String string1) {
         Hometask.string1 = string1;
+        return string1;
     }
 
-    public static void setString2(String string2) {
+    public String setString2(String string2) {
         Hometask.string2 = string2;
+        return string2;
     }
 
-    public static void setString3(String string3) {
+    public void setString3(String string3) {
         Hometask.string3 = string3;
     }
 
-    public static void setString4(String string4) {
+    public void setString4(String string4) {
         Hometask.string4 = string4;
     }
 
-    public static void setString5(String string5) {
+    public void setString5(String string5) {
         Hometask.string5 = string5;
     }
 
-    public static void setI(int i) {
+    public int setI(int i) {
         Hometask.i = i;
+        return i;
     }
 
-    public static void setY(int y) {
+    public int setY(int y) {
         Hometask.y = y;
+        return y;
     }
 
-    public static boolean isA() {
+    public boolean getA() {
         return a;
     }
 
-    public static boolean isB() {
+    public boolean getB() {
         return b;
     }
 
@@ -83,28 +90,31 @@ public class Hometask {
         return y;
     }
 
-    public static void doBooleanList() {
+
+    public void createAndPrintVariables (Boolean a, Boolean b, String string1, String string2, int i, int y){}
+
+    public void printBooleanList() {
         ArrayList<Boolean> list = new ArrayList<Boolean>();
         list.add(a);
         list.add(b);
-        System.out.println("a = " + isA() + " " + "b = " + isB());
+        System.out.println("a = " + getA() + " " + "b = " + getB());
     }
 
-    public static void doStringList() {
+    public void printStringList(String string1, String string2) {
         ArrayList<java.lang.String> list = new ArrayList<>();
         list.add(string1);
         list.add(string2);
         System.out.println("string1 = " + getString1() + " " + "string2 = " + getString2());
     }
 
-    public static void doIntegerList() {
+    public void printIntegerList(int i, int y) {
         ArrayList<Integer> list = new ArrayList<>();
         list.add(i);
         list.add(y);
         System.out.println("i = " + getI() + " y = " + getY());
     }
 
-    public static void findMax(int i, int y) {
+    public void findMax(int i, int y) {
         ArrayList<Integer> list = new ArrayList<>();
         list.add(i);
         list.add(y);
@@ -117,24 +127,19 @@ public class Hometask {
         }
     }
 
-    public static void findNeedElement() {
+    public void printSecondAndFifthElement(String str1, String str2, String str3, String str4, String str5) {
         ArrayList<String> list = new ArrayList<>();
-        list.add(string1);
-        list.add(string2);
-        list.add(string3);
-        list.add(string4);
-        list.add(string5);
+        list.add(str1);
+        list.add(str2);
+        list.add(str3);
+        list.add(str4);
+        list.add(str5);
         System.out.println("index 2 = " + list.get(1));
         System.out.println("index 5 = " + list.get(4));
     }
 
-    public static void findMin() {
-        ArrayList<Integer> list = new ArrayList<>();
-        list.add(0, 2);
-        list.add(1, 5);
-        list.add(2, 3);
-        list.add(3, 1);
-        list.add(4, 9);
+    public void findAndPrintMin(Integer... a) {
+        List<Integer> list = Arrays.asList(a);
         int min = list.get(0);
         for (int i = 1; i < list.size(); i++) {
             if (list.get(i) < min) {
@@ -142,5 +147,27 @@ public class Hometask {
             }
         }
         System.out.println("Min is " + min);
+    }
+
+    public Integer findMin(Integer[] list) {
+        this.list = new ArrayList<>();
+        int min = list[0];
+        for (int i = 1; i < list.length; i++) {
+            if (list[i] < min) {
+                min = list[i];
+            }
+        }
+        return min;
+    }
+
+    public static void main(String... args) {
+        Hometask hometask = new Hometask();
+        hometask.findAndPrintMin(1, 2, 3);
+        int min = hometask.findMin(new Integer[]{10, 2, 3});
+        System.out.println("Min is " + min);
+        hometask.printSecondAndFifthElement("qwe","qw3","sdf","vbn","qwe");
+        hometask.findMax(5,10);
+        hometask.printIntegerList(2,3);
+        hometask.printStringList(hometask.setString1("sdf"),hometask.setString2("sdw"));
     }
 }
