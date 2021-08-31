@@ -44,7 +44,7 @@ public class Hometask2 {
         return newCombineString;
     }
 
-    private static ArrayList createIntegerList(int size) {
+    public static ArrayList createIntegerList(int size) {
         ArrayList list = new ArrayList<Integer>();
         for (int i = 0; i < size; i++) {
             list.add(1 + i);
