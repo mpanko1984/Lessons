@@ -72,7 +72,7 @@ public class Hometask2 {
     }
 
     public static void main(String[] args) {
-        printElementsByIndex(createStringList(10), 5, 10);
+        printElementsByIndex(createStringList(10), 5, 9);
         printReverseIntegerList(createIntegerList(10));
         combineAndPrintTwoLists(createStringList(3), createStringList(5));
         printList(combineLists(createStringList(7), createStringList(5)));
