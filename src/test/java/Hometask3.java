@@ -15,9 +15,9 @@ public class Hometask3 {
 
     // receiving list of number and changes places 1 and 3 element
     private static void changeIndexOfElements(List<Integer> list, int indexFirstElement, int indexSecondElement) {
-        int temp = list.get(indexFirstElement);
+        int firstElementValue = list.get(indexFirstElement);
         list.set(indexFirstElement, list.get(indexSecondElement));
-        list.set(indexSecondElement, temp);
+        list.set(indexSecondElement, firstElementValue);
         System.out.println("\n" + list);
     }
 
